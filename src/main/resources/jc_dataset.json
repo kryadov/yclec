@@ -3,7 +3,7 @@
     "component": "Log4J",
     "maven":  "org.apache.logging.log4j:log4j-core",
     "vulnerableClasses": [
-      "org.apache.logging.log4j.core.lookup.JndiLookup",
+      "org.apache.logging.log4j.core.lookup.JndiLookup"
     ]
   },
   {

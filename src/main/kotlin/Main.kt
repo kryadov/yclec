@@ -105,7 +105,8 @@ class MavenVerifier {
 
         try {
             // Use Maven Central Search API
-            val searchUrl = URL("https://search.maven.org/solrsearch/select?q=fc:\"$className\"&rows=20&wt=json")
+            val encodedClassName = java.net.URLEncoder.encode("\"$className\"", "UTF-8")
+            val searchUrl = URL("https://search.maven.org/solrsearch/select?q=fc:$encodedClassName&rows=20&wt=json")
             val connection = searchUrl.openConnection()
             connection.setRequestProperty("User-Agent", "Mozilla/5.0")
 
